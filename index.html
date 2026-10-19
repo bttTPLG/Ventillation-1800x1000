@@ -30,54 +30,62 @@
         justify-content: center;
         box-sizing: border-box;
         position: relative;
-        background-color: #e30713;
         font-family: "Kanit", sans-serif;
       }
 
-      .white-rectangle {
-        position: fixed;
+      .background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1800px;
-        height: 1000px;
-        background-color: white;
-        z-index: 1;
-        clip-path: polygon(400px 0px, 1500px 0px, 1100px 1000px, 0px 1000px);
-        /*animation: closing 3s ease-in-out infinite;*/
+        left: 0;
       }
-
-      /*
-
-      @keyframes closing {
-        0% {
-          clip-path: polygon(400px 0px, 1500px 0px, 1100px 1000px, 0px 1000px);
-        }
-
-        
-        50% {
-          clip-path: polygon(900px 0px, 900px 0px, 500px 1000px, 500px 1000px);
-        }
-
-        
-        100% {
-          clip-path: polygon(400px 0px, 1500px 0px, 1100px 1000px, 0px 1000px);
-        }
-      }
-        */
-
-      /* ------------------- COLONNES ------------------- */
 
       .TPLG-mid {
         position: relative;
         flex: 0 0 1086px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
         align-items: center;
         height: 220px;
         z-index: 2;
       }
 
+      .TPLG-mid .offre {
+        width: 627px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: visible;
+      }
+
+      .TPLG-mid .offre .sticker {
+        position: absolute;
+        top: -50px;
+        left: 450px;
+        height: 150px;
+      }
+
+      .TPLG-mid .offre .txt1 {
+        font-size: 42px;
+        font-weight: bold;
+        color: #f2ff00;
+        line-height: 80%;
+        margin: 0;
+      }
+
+      .TPLG-mid .offre .txt2 {
+        font-size: 36px;
+        color: white;
+        font-weight: 700;
+        margin: 0;
+        width: 100%;
+        text-align: right;
+        padding-right: 50px;
+        box-sizing: border-box;
+      }
       .TPLG-left,
       .TPLG-right {
         position: relative;
@@ -98,20 +106,141 @@
 
       /*-------- Conteneur text ---------*/
       .TPLG-text-container {
-        padding-top: 5px;
+        margin-top: 220px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 142px;
-        height: 768px;
+        height: 548px;
         background-color: transparent;
       }
 
       .TPLG-right .TPLG-text-container {
-        gap: 50px;
+        gap: 60px;
       }
 
+      .TPLG-right .TPLG-text-container .slogan {
+        width: 100%;
+        height: fit-content;
+        padding: 10px 5px;
+        gap: 30px;
+        box-sizing: border-box;
+        background-color: #e20613;
+        display: flex;
+        flex-direction: column;
+        box-shadow: -12px 5px 0px 0px #fffb06;
+      }
+
+      .TPLG-right .TPLG-text-container .slogan .txt1 {
+        color: #f2ff00;
+        font-size: 55px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 80%;
+        text-align: center;
+      }
+
+      .TPLG-right .TPLG-text-container .slogan .txt2 {
+        color: #f2ff00;
+        font-size: 43px;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+      }
+
+      .TPLG-right .TPLG-text-container .slogan .txt3 {
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 60%;
+        text-align: center;
+      }
+
+      .TPLG-right .TPLG-text-container .slogan .txt4 {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+      }
+
+      .TPLG-right .TPLG-text-container .devis {
+        width: 100%;
+        height: fit-content;
+        padding: 10px 5px;
+        gap: 30px;
+        box-sizing: border-box;
+        background-color: #e20613;
+        display: flex;
+        flex-direction: column;
+        box-shadow: -12px 5px 0px 0px #fffb06;
+      }
+
+      .TPLG-right .TPLG-text-container .devis .txt1 {
+        font-size: 26px;
+        font-weight: 500;
+        color: white;
+        line-height: 80%;
+        margin: 0;
+      }
+
+      .TPLG-right .TPLG-text-container .devis .txt2 {
+        font-size: 25px;
+      }
+
+      .TPLG-left .TPLG-text-container .produit {
+        width: 100%;
+        height: fit-content;
+        padding: 10px 5px;
+        gap: 30px;
+        box-sizing: border-box;
+        background-color: #e20613;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 12px 5px 0px 0px #fffb06;
+      }
+
+      .TPLG-left .TPLG-text-container .produit .txt1 {
+        width: 100%;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: end;
+        color: white;
+        margin: 0;
+        line-height: 92%;
+      }
+
+      .TPLG-left .TPLG-text-container .produit .txt2 {
+        font-size: 32px;
+      }
+
+      .TPLG-left .TPLG-text-container .produit .txt3 {
+        font-size: 20px;
+        line-height: 113%;
+      }
+
+      .TPLG-left .TPLG-text-container .produit .txt4 {
+        width: 100%;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: end;
+        color: #f2ff00;
+        margin: 0;
+      }
+
+      .TPLG-left .TPLG-text-container .produit .txt5 {
+        font-size: 40px;
+        line-height: 80%;
+      }
+
+      .TPLG-left .TPLG-text-container .produit .txt6 {
+        font-size: 10px;
+        color: white;
+        line-height: 0%;
+        font-weight: 500;
+      }
       /* ---------------------- MID ---------------------- */
       /* ------------------- LOGO TPLG ------------------- */
 
@@ -124,167 +253,7 @@
         padding: 20px;
       }
 
-      /* ------------------- BANNIÈRE ------------------- */
-
-      .banner-container {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: end;
-
-        -webkit-mask-image: linear-gradient(
-          to right,
-          transparent,
-          black 20%,
-          black 80%,
-          transparent
-        );
-        mask-image: linear-gradient(
-          to right,
-          transparent,
-          black 20%,
-          black 80%,
-          transparent
-        );
-      }
-
-      .banner {
-        width: 700px;
-        height: 85%;
-        position: absolute;
-        object-fit: cover;
-        object-position: 50% 0%;
-        transform: scale(1.4);
-        opacity: 0.45;
-        filter: brightness(1.5) contrast(1.1) saturate(1.5) grayscale(0.2);
-      }
-
-      /* -------------------  Carousel Text --------------- */
-      .TPLG-text-carousel-container {
-        margin-right: 50px;
-        padding: 20px;
-        height: 100%;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-sizing: border-box;
-      }
-
-      .TPLG-text-carousel {
-        position: relative;
-        padding: 20px;
-        box-sizing: border-box;
-        width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: flex-start;
-      }
-
-      .TPLG-text-carousel2 {
-        height: 50px;
-        position: relative;
-        padding: 20px;
-        box-sizing: border-box;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-
-      .TPLG-text-carousel-container p {
-        background-color: rgb(255, 255, 255);
-        font-size: 30px;
-        font-weight: 700;
-        position: absolute;
-        text-transform: uppercase;
-        opacity: 0;
-        margin: 0;
-        padding: 5px 8px;
-      }
-
-      .TPLG-text-carousel .animation-left {
-        border-radius: 10px 0 0 0;
-        border-top: solid 2px #000000;
-        border-left: solid 4px #000000;
-        color: #000000;
-        animation: rotateText 16s infinite;
-      }
-
-      .TPLG-text-carousel2 .animation-right {
-        color: #e30713;
-        border-radius: 0 0 10px 0;
-        animation: rotateText2 16s infinite;
-        border-right: solid 4px #e30713;
-        border-bottom: solid 1px #e30713;
-      }
-
-      .TPLG-text-carousel p:nth-child(1),
-      .TPLG-text-carousel2 p:nth-child(1) {
-        animation-delay: 0s;
-      }
-
-      .TPLG-text-carousel p:nth-child(2),
-      .TPLG-text-carousel2 p:nth-child(2) {
-        animation-delay: 4s;
-      }
-      .TPLG-text-carousel p:nth-child(3),
-      .TPLG-text-carousel2 p:nth-child(3) {
-        animation-delay: 8s;
-      }
-      .TPLG-text-carousel p:nth-child(4),
-      .TPLG-text-carousel2 p:nth-child(4) {
-        animation-delay: 12s;
-      }
-
-      @keyframes rotateText {
-        0% {
-          opacity: 0;
-          transform: translateX(20px);
-        }
-        5% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-        25% {
-          opacity: 1;
-        }
-        30% {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-
-      @keyframes rotateText2 {
-        0% {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        5% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-        25% {
-          opacity: 1;
-        }
-        30% {
-          opacity: 0;
-          transform: translateX(20px);
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-
-      /* ----------------  Icons  ------------------- */
-
-      .TPLG-logo-container,
-      .TPLG-text-carousel {
+      .TPLG-logo-container {
         position: relative;
         z-index: 1;
       }
@@ -292,418 +261,67 @@
       .TPLG-LOGO {
         width: 80%;
       }
-
-      .TPLG-Icons-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .TPLG-left .TPLG-Icons-container {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-
-      .TPLG-bulle-icon-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50px;
-        width: 46.42%;
-        aspect-ratio: 1 / 1;
-        background-color: #ffffff;
-        border: solid 2px #e30713;
-      }
-
-      .TPLG-bulle-icon-container:hover {
-        transform: translateY(-3px);
-      }
-
-      .TPLG-Icons-container a {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        position: relative;
-        z-index: 3;
-      }
-
-      .TPLG-Icons-container p {
-        margin: 0 0 8px 0;
-        font-size: 14px;
-        font-weight: 500;
-      }
-
-      /* ------------------  Boutton Devis Gratuit  ------------------------*/
-      .TPLG-wrap-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 50px;
-        margin-left: 10px;
-        box-sizing: border-box;
-      }
-
-      .TPLG-button {
-        max-width: 130px;
-        min-height: 60px;
-        display: inline-flex;
-        font-family: "Kanit", sans-serif;
-        font-size: 18px;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
-        text-align: center;
-        text-decoration: none;
-        letter-spacing: 1.3px;
-        font-weight: 700;
-        color: #ffffff;
-        background: #e30713;
-        border: #ffffff solid 2px;
-        border-radius: 1000px;
-        box-shadow: 12px 12px 24px #94050c;
-        transition: all 0.3s ease-in-out 0s;
-        cursor: pointer;
-        outline: none;
-        position: relative;
-        padding: 10px;
-      }
-
-      .TPLG-button:hover {
-        color: #e30713;
-        background-color: #ffffff;
-        border: #e30713 solid 2px;
-        transform: translateY(-6px);
-      }
-
-      .TPLG-button:hover::before,
-      .TPLG-button:focus::before {
-        opacity: 1;
-      }
-
-      .TPLG-button::after {
-        content: "";
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        border: 6px solid #ffffff;
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        animation: ring 1.5s infinite;
-      }
-
-      .TPLG-button:hover::after,
-      .TPLG-button:focus-visible::after {
-        animation: none;
-        display: none;
-      }
-
-      @keyframes ring {
-        0% {
-          width: 30px;
-          height: 30px;
-          opacity: 1;
-        }
-        100% {
-          width: 200px;
-          height: 200px;
-          opacity: 0;
-        }
-      }
-
-      /* ------------Carrousel img -------------------- */
-      .TPLG-carrousel-container {
-        position: absolute;
-        top: 300px;
-        z-index: -1;
-        width: 90%;
-        height: 45%;
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-        box-sizing: border-box;
-      }
-
-      .TPLG-pic-ctn {
-        max-height: 403px;
-        height: 100%;
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        border-radius: 25px;
-        border: 3px solid white;
-      }
-
-      .TPLG-pic-ctn > img {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0;
-        animation: display 10s infinite;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-
-      @keyframes display {
-        0%,
-        25%,
-        100% {
-          opacity: 0;
-        }
-        5%,
-        20% {
-          opacity: 1;
-        }
-      }
-
-      .TPLG-pic-ctn img:nth-child(2) {
-        animation-delay: 2s;
-      }
-      .TPLG-pic-ctn img:nth-child(3) {
-        animation-delay: 4s;
-      }
-      .TPLG-pic-ctn img:nth-child(4) {
-        animation-delay: 6s;
-      }
-      .TPLG-pic-ctn img:nth-child(5) {
-        animation-delay: 8s;
-      }
-
-      .TPLG-left .TPLG-LOGO {
-        margin-bottom: 30px;
-        width: 95%;
-      }
-
-      .TPLG-right .TPLG-LOGO {
-        margin-bottom: 30px;
-        width: 95%;
-        background-color: white;
-        margin-left: 10px;
-        padding: 5px 9px 5px 5px;
-        border-radius: 3px;
-        box-sizing: border-box;
-      }
-
-      .TPLG-global-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-      }
     </style>
   </head>
 
   <body>
     <div class="wrapper">
-      <div class="white-rectangle"></div>
+      <img src="Habillage-ventillation-fond2.png" class="background-image" />
       <!-- Gauche -->
       <section class="TPLG-left">
-        <a
-          href="https://www.toutpourlegrain.fr/fr/nos-produits/stockage-manutention-2"
-          target="_blank"
-          class="TPLG-global-link"
-        ></a>
         <div class="TPLG-text-container">
-          <!-- Icons -->
-          <div class="TPLG-Icons-container">
-            <!-- %%CLICK_URL%% -->
-            <a
-              href="https://www.toutpourlegrain.fr/fr/nos-produits/stockage-manutention-2?categories=Stockage"
-              target="_blank"
-            >
-              <div class="TPLG-bulle-icon-container">
-                <img
-                  src="https://cdn-icons-png.freepik.com/512/5612/5612970.png?uid=R232511046&ga=GA1.1.1897923421.1768814400"
-                  alt="Icon Stockage"
-                  style="width: 60%"
-                />
-              </div>
-            </a>
-            <p>Stockage</p>
-
-            <!-- %%CLICK_URL%% -->
-            <a
-              href="https://www.toutpourlegrain.fr/fr/nos-produits/stockage-manutention-2?categories=Manutention"
-              target="_blank"
-            >
-              <div class="TPLG-bulle-icon-container">
-                <img
-                  src="https://cdn-icons-png.freepik.com/512/1799/1799795.png?uid=R232511046&ga=GA1.1.1897923421.1768814400"
-                  alt="Icon Manutention"
-                  style="width: 60%"
-                />
-              </div>
-            </a>
-            <p>Manutention</p>
-
-            <!-- %%CLICK_URL%% -->
-            <a
-              href="https://www.toutpourlegrain.fr/fr/nos-produits/stockage-manutention-2?categories=Nettoyage"
-              target="_blank"
-            >
-              <div class="TPLG-bulle-icon-container">
-                <img
-                  src="https://cdn-icons-png.freepik.com/512/2156/2156913.png?uid=R232511046&ga=GA1.1.1897923421.1768814400"
-                  alt="Icon Nettoyage"
-                  style="width: 60%"
-                />
-              </div>
-            </a>
-            <p>Nettoyage</p>
-
-            <!-- %%CLICK_URL%% -->
-            <a
-              href="https://www.toutpourlegrain.fr/fr/nos-produits/stockage-manutention-2?categories=S%C3%A9chage"
-              target="_blank"
-            >
-              <div class="TPLG-bulle-icon-container">
-                <img
-                  src="https://cdn-icons-png.freepik.com/512/5830/5830341.png?uid=R232511046&ga=GA1.1.1897923421.1768814400"
-                  alt="Icon Séchage"
-                  style="width: 60%"
-                />
-              </div>
-            </a>
-            <p>Séchage</p>
-
-            <!-- %%CLICK_URL%% -->
-            <a
-              href="https://www.toutpourlegrain.fr/fr/nos-produits/stockage-manutention-2?categories=Ventilation"
-              target="_blank"
-            >
-              <div class="TPLG-bulle-icon-container">
-                <img
-                  src="https://cdn-icons-png.freepik.com/256/2758/2758315.png?uid=R232511046&ga=GA1.1.1897923421.1768814400&semt=ais_white_label"
-                  alt="Icon Ventilation"
-                  style="width: 60%"
-                />
-              </div>
-            </a>
-            <p>Ventilation</p>
-            <a
-              href="https://www.toutpourlegrain.fr/fr/nos-produits/echantillonnage-1"
-              target="_blank"
-            >
-              <div class="TPLG-bulle-icon-container">
-                <img
-                  src="https://raw.githubusercontent.com/bttTPLG/img/00ae5f03a30b9baeb6174cb91cb242c37271bcd2/asset/icon-echantillon.svg"
-                  alt="Icon Stockage"
-                  style="width: 70%"
-                />
-              </div>
-            </a>
-            <p>Échantillonnage</p>
+          <div class="produit">
+            <p class="txt1">
+              Caniveau <br />
+              <span class="txt2">+ grille</span><br /><span class="txt3"
+                >renforcée</span
+              >
+            </p>
+            <p class="txt4">
+              A partir de <br />
+              <span class="txt5">37€/m</span><br /><span class="txt6"
+                >suivant stock disponible</span
+              >
+            </p>
           </div>
-          <!-- Logo -->
-          <img
-            src="https://www.toutpourlegrain.fr/images/Logo-TPLG.svg"
-            alt="Logo Tout Pour Le Grain"
-            class="TPLG-LOGO"
-          />
         </div>
       </section>
 
       <!-- Milieu -->
       <section class="TPLG-mid">
-        <a
-          href="https://www.toutpourlegrain.fr/fr/nos-produits/stockage-manutention-2"
-          target="_blank"
-          class="TPLG-global-link"
-        ></a>
-        <!-- Image de fond-->
-        <div class="banner-container">
-          <img
-            class="banner"
-            src="https://www.toutpourlegrain.fr/images/fond-home-2.webp"
-            alt=""
-          />
-        </div>
         <!-- Logo -->
         <div class="TPLG-logo-container">
           <img
-            src="https://www.toutpourlegrain.fr/images/Logo-TPLG.svg"
+            src="Logo-TPLG-blanc-2.svg"
             alt="Logo Tout Pour Le Grain"
             class="TPLG-LOGO"
           />
         </div>
-        <!-- Carousel text -->
-        <div class="TPLG-text-carousel-container">
-          <div class="TPLG-text-carousel">
-            <p class="animation-left">Stockez vos récoltes</p>
-            <p class="animation-left">Expertise technique</p>
-            <p class="animation-left">Votre projet de stockage</p>
-            <p class="animation-left">étude gratuite</p>
-          </div>
-          <div class="TPLG-text-carousel2">
-            <p class="animation-right">à moindre coût</p>
-            <p class="animation-right">depuis plus de 65 ans</p>
-            <p class="animation-right">sur-mesure</p>
-            <p class="animation-right">et personnalisée</p>
-          </div>
+        <div class="offre">
+          <img src="sticker.png" class="sticker" />
+          <p class="txt1">OFFRE <br />EXCEPTIONNELLE !</p>
+          <p class="txt2">Caniveau de ventilation</p>
         </div>
       </section>
 
       <!-- Droite -->
       <section class="TPLG-right">
-        <a
-          href="https://www.toutpourlegrain.fr/fr/nos-produits/stockage-manutention-2"
-          target="_blank"
-          class="TPLG-global-link"
-        ></a>
-        <!-- Carousel images -->
-        <div class="TPLG-carrousel-container">
-          <div class="TPLG-pic-ctn">
-            <img
-              src="https://www.toutpourlegrain.fr/images/produits/cellules-exterieures.JPG"
-              alt="cellule extérieures"
-              class="TPLG-pic"
-            />
-            <img
-              src="https://www.toutpourlegrain.fr/images/realisations/5f4e452cba1ac688094008.jpg"
-              alt="élévateur à godet"
-              class="TPLG-pic"
-            />
-            <img
-              src="https://www.toutpourlegrain.fr/images/produits/grain-pump-63cfdef727d50.jpg"
-              alt="grain pump"
-              class="TPLG-pic"
-            />
-            <img
-              src="https://www.toutpourlegrain.fr/images/produits/cellule-secheuse-en-toit.jpg"
-              alt="cellule sécheuse"
-              class="TPLG-pic"
-            />
-            <img
-              src="https://www.toutpourlegrain.fr/images/produits/cellules-interieures.JPG"
-              alt="cellules à fond connique"
-              class="TPLG-pic"
-            />
-          </div>
-        </div>
         <div class="TPLG-text-container">
-          <!-- Boutton -->
-          <div class="TPLG-wrap-button">
-            <!-- %%CLICK_URL%% -->
-            <a
-              href="https://www.toutpourlegrain.fr/fr/contact"
-              target="_blank"
-              class="TPLG-button"
-            >
-              Devis gratuit
-            </a>
+          <div class="slogan">
+            <p class="txt1">
+              PRIX<br />
+              <span class="txt2">INEDIT</span>
+            </p>
+            <p class="txt3">
+              ÉTUDE<br />
+              <span class="txt4">SUR-MESURE</span>
+            </p>
           </div>
-          <!-- Logo -->
-          <img
-            src="https://www.toutpourlegrain.fr/images/Logo-TPLG.svg"
-            alt="Logo Tout Pour Le Grain"
-            class="TPLG-LOGO"
-          />
+          <div class="devis">
+            <p class="txt1">
+              Demandez <br /><span class="txt2">votre devis</span>
+            </p>
+          </div>
         </div>
       </section>
     </div>
